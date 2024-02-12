@@ -44,12 +44,12 @@ body {
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
 }
-a[href]:not(.visited){
+a:link {
     color: var(--text-color);
     text-decoration: none;
 }
 
-a.visited {
+a:visited {
     font-style: italic;
 }
 
@@ -58,7 +58,7 @@ a:hover {
 }
 
 a:active {
-    background-color: var(--color-light-grey):
+    background-color: var(--color-light-grey);
 }
 
 .visually-hidden {
