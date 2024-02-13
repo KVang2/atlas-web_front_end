@@ -488,17 +488,17 @@ a:active {
 }
 
 .nav .nav-item {
-    font-family: var(--nav-item-font-family);
-    font-weight: var(--nav-item-font-weight);
-    font-size: var(--nav-item-font-size);
-    letter-spacing: var(--nav-item-leter-spacing);
-    display: var(--nav-tem-display);
-    margin: var(--nav-item-margin);
+        font-family: var(--nav-item-font-family);
+        font-weight: var(--nav-item-font-weight);
+        font-size: var(--nav-item-font-size);
+        letter-spacing: var(--nav-item-leter-spacing);
+        display: var(--nav-tem-display);
+        margin: var(--nav-item-margin);
 }
 
 .nav .nav-link {
-    display: block;
-    padding: 0.5rem 1rem
+        display: block;
+        padding: 0.5rem 1rem
 }
 
 .nav .nav-link:hover {
