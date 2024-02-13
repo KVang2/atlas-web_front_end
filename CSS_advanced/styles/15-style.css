@@ -348,11 +348,7 @@
     display: none;
   }
 
-* {
-     box-sizing: border-box;
-}
-
-  :root {
+:root {
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
@@ -379,6 +375,10 @@
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html {
