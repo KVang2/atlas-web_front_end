@@ -516,7 +516,7 @@ a:active {
     color: var(--color-primary);
 }
 
-.card-work {
+.card-work .card-outer {
     position: relative;
     overflow: hidden;
 }
