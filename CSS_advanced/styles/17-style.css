@@ -372,6 +372,7 @@
     --section-header-padding: 0 0 3rem;
     --section-body-padding: 0 0 3rem;
     --section-footer-align: center;
+    --section-footer-padding: 3rem 0 0;
     --footer-padding: 5rem 0 1rem;
 
 }
@@ -449,6 +450,10 @@ a:active {
 
 .section {
     padding: var(--section-padding);
+}
+
+.section-header {
+    padding: var(--section-header-padding);
 }
 
 .section-body {
