@@ -3,7 +3,7 @@ $color2: #FF0000;
 
 body {
    color: $color1;
-   .red {
+   > .red {
     color: $color2;
    } 
 }
