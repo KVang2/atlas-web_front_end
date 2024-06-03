@@ -1,0 +1,15 @@
+$margin1: 10px;
+$margin2: 15px;
+
+@mixin margin-lr($margin) {
+    margin-left: $margin1;
+    margin-right: $margin2;
+}
+
+body {
+    @include @margin-lr($margin1);
+}
+
+div {
+    @include @margin-lr($margin2);
+}
