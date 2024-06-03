@@ -1,0 +1,10 @@
+$color1: #3D3D3D;
+$color2: #FF0000;
+
+body {
+   color: $color1;
+   .red body {
+    &:first-child
+    color: $color2;
+   } 
+}
