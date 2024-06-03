@@ -1,9 +1,9 @@
-$h-font-sizes: (1px, 2px, 3px, 4px, 5px);
+h-font-sizes: (1px, 2px, 3px, 4px, 5px);
 $H*: (h1, h2, h3, h4, h5);
 
 @for $i from 1 through 5 {
     $heading: nth($H*, $i);
     #{$heading} {
-        font-size: nth($h-font-sizes, $i)
+        font-size: $h-font-sizes * $i;
     }
 }
