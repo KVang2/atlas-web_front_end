@@ -23,3 +23,8 @@ a, a:hover, a:focus {
 .text-muted {
     color: #8C8C8C;
 }
+
+.card-header {
+    background-color: #E0003C;
+    color: #FFFFFF;
+}
