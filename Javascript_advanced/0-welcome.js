@@ -1,4 +1,4 @@
-function welcome(firstName, lastname) {
+function welcome(firstName, lastName) {
     let fullName = firstName + " " + lastName;
 
     function displayFullName() {
