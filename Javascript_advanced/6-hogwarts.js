@@ -1,34 +1,34 @@
 class studentHogwarts {
-    // Private fields
-    #privateScore = 0;
-    
-    // Public field
-    name = null;
+  // Private fields
+  #privateScore = 0;
 
-    // Private method
-    #changeScoreby(points) {
-        this.#privateScore += points;
-    }
+  // Public field
+  name = null;
 
-    // Set name
-    setName(newName) {
-        this.#name = newName;
-    }
+  // Private method
+  #changeScoreby(points) {
+    this.#privateScore += points;
+  }
 
-    // Reward students
-    rewardStudent() {
-        this.#changeScoreby(1);
-    }
+  // Set name
+  setName(newName) {
+    this.#name = newName;
+  }
 
-    // Penalize Students
-    penalizeStudent() {
-        this.#changeScoreby(-1);
-    }
+  // Reward students
+  rewardStudent() {
+    this.#changeScoreby(1);
+  }
 
-    // get Score
-    getScore() {
-        return `${this.#name}: ${this.#privateScore}`;
-    }
+  // Penalize Students
+  penalizeStudent() {
+    this.#changeScoreby(-1);
+  }
+
+  // get Score
+  getScore() {
+    return `${this.#name}: ${this.#privateScore}`;
+  }
 }
 
 // Harry

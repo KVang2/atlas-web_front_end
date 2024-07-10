@@ -1,7 +1,7 @@
 function weclomeMessage(fullName) {
-    return function() {
-        alert("Welcome " + fullName);
-    };
+  return function() {
+      alert("Welcome " + fullName);
+  };
 }
 
 var guillaume = welcomeMessage("Guillaume");
