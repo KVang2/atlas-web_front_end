@@ -3,42 +3,43 @@
 
     <head>
         <meta charset="utf-8"/>
-        <title>Task 2</title>
+        <title>Task 3</title>
         <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     </head>
     <body>
         <script type="application/javascript">
             $(document).ready(function(){
-                function createFamilyTree() {
-                    const table = `
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Firstname</th>
-                                <th>Lastname</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Guillaume</td>
-                                <td>Salva</td>
-                            </tr>
-                            <tr>
-                                <td>Paulette</td>
-                                <td>Salva</td>
-                            </tr>
-                            <tr>
-                                <td>Guillaume</td>
-                                <td>Antoine</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    `;
-
-                    $('body').append(table);
-                }
                 createFamilyTree();
             });
+
+            function createFamilyTree() {
+                const table = $('<table>');
+                const thead = $('<thead>').append(
+                    $('<tr>').append(
+                        $('<th>').text('Firstname'),
+                        $('<th>').text('Lastname')
+                    )
+                );
+                table.append(thead);
+
+                const tbody = $('<tbody>').append(
+                    $('<tr>').append(
+                        $('<td>').text('Guillaume'),
+                            $('<td>').text('Salva')
+                    ),
+                    $('<tr>').append(
+                        $('<td>').text('Paulette'),
+                            $('<td>').text('Salva')
+                    ),
+                    $('<tr>').append(
+                        $('<td>').text('Antoine'),
+                        $('<td>').text('Salva')
+                    )
+                );
+                table.append(tbody);
+
+                $('body').append(table);
+            }
         </script>
     </body>
 

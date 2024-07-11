@@ -9,8 +9,11 @@
     <body>
         <script type="application/javascript">
             $(document).ready(function(){
-                function createFamilyTree() {
-                    const table = `
+                createFamilyTree();
+            });
+
+            function createFamilyTree() {
+                const table = `
                     <table>
                         <thead>
                             <tr>
@@ -28,17 +31,15 @@
                                 <td>Salva</td>
                             </tr>
                             <tr>
-                                <td>Guillaume</td>
                                 <td>Antoine</td>
+                                <td>Salva</td>
                             </tr>
                         </tbody>
                     </table>
-                    `;
+                `;
 
-                    $('body').append(table);
-                }
-                createFamilyTree();
-            });
+                $('body').append(table);
+            }
         </script>
     </body>
 
