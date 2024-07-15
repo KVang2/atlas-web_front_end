@@ -25,6 +25,12 @@
             }
 
             function addNewMember(firstName, lastName, position) {
+                if (position === 'before') {
+                    $('table').before(newRow);
+                } else {
+                    $('table').append(newRow);
+                }
+
                 const tbody = $('table tbody');
                 const newRow = $('<tr>').append(
                     $('<td>').text(firstName),
@@ -43,6 +49,27 @@
             addNewMember("Gerard", "Snizt");
             addNewMember("Victor", "Salva");
         });
+
+        function createForm() {
+            $(document).ready(function() {
+                $
+            })
+            <input type="text">
+            <input type="text">
+
+            <select>
+                <option value="before">Before</option>
+                <option value="after">After</option>
+            </select>
+
+            <input type="submit" value="Submit">
+            $('#submit').click(addNewMember() {
+
+            })
+        }
+
+        createFamilyTree();
+        createForm();
         </script>
     </body>
 
