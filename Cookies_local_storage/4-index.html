@@ -28,13 +28,11 @@
             const firstname = document.getElementById('firstname').value;
             const email = document.getElementById('email').value;
 
-            // setting expire in 10 days
-            const d = new Date();
-            d.setTime(d.getTime() + (10 * 24 * 60 * 60 * 10000));
-            const expires = "expires=" + d.toUTCString();
+            // setting cookies with js-cookie expire in 10 days
+            Cookies.set('firstname', firstname, { expires: 10 });
+            Cookies.set('email', email, { expires: 10 });
 
-            document.cookie = `firstname=${firstname}; path=/`;
-            document.cookie = `email=${email}; path=/`; 
+            showWelcomeMessageOrForm();
         }
 
         // Function to show cookies
