@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Shopping Cart</title>
+</head>
+<body>
+    <script>
+        let availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+        if (!window.sessionStorage) {
+            alert('Sorry, your browser does not support Web storage. Try again with a better one');
+        } else {
+            createStore();
+            displayCart();
+        }
+
+        // Function to add item to cart
+        function addItemToCart(item) {
+            sessionStorage.setItem(item, true);
+            displayCart();
+        }
+
+        // Function to create store
+        function createStore() {
+            const storeDiv = document.createElement('div');
+            const ul = document.createElement('ul');
+
+            // Loop through the array of items and create a list item for each
+            for (let i = 0; i < availableItems.length; i++) {
+                const item = availableItems[i];
+                const li = document.createElement('li');
+                li.textContent = item;
+                li.onclick = () => addItemToCart(item);
+                ul.appendChild(li);
+            }
+
+            // Append the ul to the store div
+            storeDiv.appendChild(ul);
+            document.body.appendChild(storeDiv);
+        }
+
+        // Function to display cart
+        function displayCart() {
+            // Get cart items from local storage
+            let cartItems = [];
+            for (let i = 0; i < sessionStorage.length; i++) {
+                const key = sessionStorage.key(i);
+                if (availableItems.includes(key)) {
+                    cartItems.push(key);
+                }
+            }
+
+            // If there are no items in the cart, do nothing
+            if (cartItems.length === 0) {
+                return;
+            }
+
+            // Display the message with the number of items in the cart
+            const p = document.createElement('p');
+            p.textContent = `You previously had ${cartItems.length} items in your cart.`;
+            document.body.appendChild(p);
+        }
+    </script>
+</body>
+</html>

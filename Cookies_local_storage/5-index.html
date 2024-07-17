@@ -25,9 +25,24 @@
 
         // function create store
         function createStore() {
-            
+            const list = document.createElement('ul');
+            for (let i = 0; i < availableItems.length; i++) {
+                const li = document.createElement('li');
+                li.textContent = item;
+                li.onclick = () => addItemToCart(item);
+                ul.appendChild(li);
+            }
         }
 
-</script>
+        // function displayCart
+        function displayCart() {
+            if (cartItems.length === 0) {
+                return;
+            }
+            const p = document.createElement('p');
+            p.textContent = `You previously had ${cartItems.length} items in your cart.`;
+            doucment.body.appendChild(p);
+        }
+    </script>
 </body>
 </html>
