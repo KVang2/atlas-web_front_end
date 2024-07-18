@@ -8,9 +8,8 @@
 <body>
     <script>
         let availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
-        console.log();
 
-        if (!localStorage()) {
+        if (typeof(Storage) === "undefined") {
             alert('Sorry, your browser does not support Web storage. Try again with a better one');
         } else {
             createStore();
@@ -25,23 +24,29 @@
 
         // function create store
         function createStore() {
-            const list = document.createElement('ul');
+            const ul = document.createElement('ul');
             for (let i = 0; i < availableItems.length; i++) {
                 const li = document.createElement('li');
+                const item = availableItems[i];
                 li.textContent = item;
                 li.onclick = () => addItemToCart(item);
                 ul.appendChild(li);
             }
+            document.body.appendChild(ul);
         }
 
         // function displayCart
         function displayCart() {
+            const cartItems = [];
+            for (let i = 0; i < localStorage.length; i++) {
+                cartItems.push(localStorage.key(i));
+            }
             if (cartItems.length === 0) {
                 return;
             }
             const p = document.createElement('p');
             p.textContent = `You previously had ${cartItems.length} items in your cart.`;
-            doucment.body.appendChild(p);
+            document.body.appendChild(p);
         }
     </script>
 </body>
