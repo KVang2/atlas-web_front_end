@@ -31,15 +31,13 @@
             const expires = "expires=" + d.toUTCString();
 
             // set cookies with obtained values
-            document.cookie = `firstname=${firstname}; path=/`;
-            document.cookie = `email=${email}; path=/`; 
+            document.cookie = `firstname=${firstname}; ${expires}; path=/`;
+            document.cookie = `email=${email}; ${expires}; path=/`; 
         }
 
         // Function to show cookies
         function showCookies() {
             const p = document.createElement('p');
-            const cookies = document.cookie;
-
             p.innerHTML = `Cookies: ${cookies}`;
             document.body.appendChild(p);
         }
